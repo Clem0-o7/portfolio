@@ -59,19 +59,6 @@ const experiences: Experience[] = [
       "Took on 'dev on duty' role for continuous support",
     ],
   },
-  {
-    date: "Nov, 2023 - March, 2024",
-    title: "Frontend Developer Intern",
-    company: "Payd, Nairobi",
-    description: "Gained valuable experience in frontend development and collaboration.",
-    tasks: [
-      "Collaborated with UX/UI developers on frontend development",
-      "Created a user-friendly platform with efficient design",
-      "Ensured seamless integration with frontend and backend leads",
-      "Assigned tasks and managed distribution effectively",
-      "Took on 'dev on duty' role for continuous support",
-    ],
-  },
 ];
 
 export { experiences }; 
@@ -86,7 +73,7 @@ export interface Project {
 }
 
 export const projects: Project[] = [
-  {
+  /*{
     title: "Poet Landing Page",
     description: "A responsive landing page for a Poet with slider animation, highlighting details about the poet.",
     image: "/images/poet_blog.png",
@@ -113,6 +100,6 @@ export const projects: Project[] = [
     image: "/images/car-rent.png",
     tech: "React, Tailwind CSS, Bootstrap",
     demoLink: "https://aspect-car-rental.vercel.app/"
-  }
+  }*/
 ]
 

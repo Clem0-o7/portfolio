@@ -2,9 +2,9 @@ import { MetadataRoute } from 'next';
 
 export default function manifest(): MetadataRoute.Manifest {
   return {
-    name: 'Olive Bishop - Software Developer',
-    short_name: 'Olive Bishop',
-    description: 'Olive Bishop, a software developer from Mombasa, Kenya, crafts seamless web applications. Explore my portfolio featuring Next.js, Tailwind CSS, and more.',
+    name: 'Clement Andrew A',
+    short_name: 'Andrew',
+    description: 'Clement Andrew, a software developer from TamilNadu, India, crafts seamless software solutions. Explore my portfolio featuring Next.js, Tailwind CSS, and more.',
     start_url: '/',
     display: 'standalone',
     background_color: '#020912',

@@ -28,7 +28,7 @@ export default function Home() {
         {/* Title */}
         <div className="mt-5 max-w-2xl text-center mx-auto">
           <h1 className="block font-bold text-gray-800 text-3xl sm:text-4xl md:text-5xl lg:text-6xl dark:text-neutral-200">
-            Hi, I am Olive Bishop
+            Hi, I am Clement Andrew
             <span className="bg-clip-text text-2xl sm:text-3xl md:text-4xl lg:text-5xl bg-gradient-to-tl from-[#606060] to-[#7f7f7f] text-transparent">
               <br />
               Full Stack Software Developer
@@ -39,7 +39,7 @@ export default function Home() {
 
         <div className="mt-5 max-w-3xl text-center mx-auto">
           <p className="text-sm sm:text-base md:text-lg lg:text-xl text-gray-600 dark:text-neutral-400">
-          I&apos;m a Software Developer who believes in building creative and modern web and mobile apps. Inspired by <strong>Kaizen</strong>, strive for continuous learning and improvement, always seeking innovative ways to refine my skills and knowledge.
+          I&apos;m a Computer Science student and aspiring Software Developer passionate about crafting modern, impactful solutions. Guided by the principle of continuous growth, I embrace challenges as opportunities to learn and innovate, blending technical expertise with a creative mindset to develop applications that make a meaningful difference.
           </p>
         </div>
         {/* End Description */}

@@ -14,7 +14,7 @@ export default function AboutUs() {
         {/* About Content */}
         <div className="mt-5 max-w-3xl text-center mx-auto">
           <p className="text-lg md:text-xl text-gray-800 dark:text-neutral-200 mb-8">
-            Olive is a passionate software developer dedicated to solving community challenges through innovative technology solutions. With a diverse skill set spanning front-end and back-end development, Olive creates robust and user-friendly applications that make a difference.
+          Clement is a third-year Computer Science student with a strong passion for technology and innovation. With experience in both front-end and back-end development, Clement excels at building intuitive and impactful applications. Dedicated to continuous learning and problem-solving, Clement aims to leverage technology to create meaningful solutions and drive positive change.
           </p>
         </div>
 
