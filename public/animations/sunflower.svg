@@ -1,0 +1,68 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 120 120" width="100%" height="100%">
+<defs>
+<style>
+      @keyframes sway {
+        0%, 100% { transform: rotate(-3deg); }
+        50% { transform: rotate(3deg); }
+      }
+      @keyframes petalGlow {
+        0%, 100% { filter: drop-shadow(0 0 3px rgba(251, 191, 36, 0.4)); }
+        50% { filter: drop-shadow(0 0 8px rgba(251, 191, 36, 0.9)); }
+      }
+      @keyframes floatParticle {
+        0% { transform: translateY(0px) scale(0.8); opacity: 0.2; }
+        50% { transform: translateY(-12px) scale(1.2); opacity: 0.9; }
+        100% { transform: translateY(-24px) scale(0.6); opacity: 0; }
+      }
+      .sway-stem {
+        transform-origin: 60px 105px;
+        animation: sway 4s ease-in-out infinite;
+      }
+      .glow-flower {
+        animation: petalGlow 3s ease-in-out infinite;
+      }
+      .particle-1 { animation: floatParticle 3.2s ease-in-out infinite; }
+      .particle-2 { animation: floatParticle 4.1s ease-in-out 1.2s infinite; }
+      .particle-3 { animation: floatParticle 2.8s ease-in-out 0.6s infinite; }
+    </style>
+</defs>
+<!-- Ground patch / Soil mound in pixel style -->
+<rect fill="#2d1b0d" height="6" rx="2" width="48" x="36" y="102"></rect>
+<rect fill="#452814" height="6" rx="2" width="32" x="44" y="98"></rect>
+<rect fill="#5c381e" height="5" rx="1" width="16" x="52" y="94"></rect>
+<g class="sway-stem">
+<!-- Stem -->
+<path d="M60 96 Q58 75 60 48" fill="none" stroke="#4ade80" stroke-linecap="round" stroke-width="4"></path>
+<!-- Left Leaf -->
+<path d="M59 78 C46 75 42 66 40 60 C48 61 56 68 59 74 Z" fill="#22c55e" stroke="#15803d" stroke-width="1.2"></path>
+<!-- Right Leaf -->
+<path d="M61 68 C74 65 78 56 80 50 C72 51 64 58 61 64 Z" fill="#22c55e" stroke="#15803d" stroke-width="1.2"></path>
+<!-- Sunflower Blossom Group -->
+<g class="glow-flower">
+<!-- Outer Petals (Golden Amber) -->
+<circle cx="60" cy="42" fill="#f59e0b" opacity="0.3" r="15"></circle>
+<!-- Individual Petal Dots / Pixel Geometric Rays -->
+<rect fill="#fbbf24" height="9" rx="3" width="8" x="56" y="20"></rect>
+<rect fill="#fbbf24" height="9" rx="3" width="8" x="56" y="55"></rect>
+<rect fill="#fbbf24" height="8" rx="3" width="9" x="38" y="38"></rect>
+<rect fill="#fbbf24" height="8" rx="3" width="9" x="73" y="38"></rect>
+<!-- Diagonal Petals -->
+<rect fill="#fcd34d" height="8" rx="3" transform="rotate(15 48 30)" width="8" x="44" y="26"></rect>
+<rect fill="#fcd34d" height="8" rx="3" transform="rotate(-15 72 30)" width="8" x="68" y="26"></rect>
+<rect fill="#fcd34d" height="8" rx="3" transform="rotate(-15 48 54)" width="8" x="44" y="50"></rect>
+<rect fill="#fcd34d" height="8" rx="3" transform="rotate(15 72 54)" width="8" x="68" y="50"></rect>
+<!-- Inner Seed Disc -->
+<circle cx="60" cy="42" fill="#78350f" r="10" stroke="#b45309" stroke-width="2"></circle>
+<!-- Pixel Seed Grid Pattern -->
+<circle cx="58" cy="40" fill="#fbbf24" r="1.5"></circle>
+<circle cx="62" cy="40" fill="#fbbf24" r="1.5"></circle>
+<circle cx="60" cy="44" fill="#fde68a" r="1.5"></circle>
+<circle cx="56" cy="44" fill="#f59e0b" r="1"></circle>
+<circle cx="64" cy="44" fill="#f59e0b" r="1"></circle>
+</g>
+</g>
+<!-- Glowing Bio-Luminescent Pollen / Firefly Motes -->
+<circle class="particle-1" cx="46" cy="40" fill="#fef08a" r="1.8"></circle>
+<circle class="particle-2" cx="74" cy="32" fill="#fbbf24" r="2.2"></circle>
+<circle class="particle-3" cx="58" cy="18" fill="#fde047" r="1.5"></circle>
+</svg>

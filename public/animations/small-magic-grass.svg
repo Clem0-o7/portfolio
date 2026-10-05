@@ -1,0 +1,44 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 120 120" width="100%" height="100%">
+<defs>
+<style>
+      @keyframes grassSway {
+        0%, 100% { transform: skewX(-4deg); }
+        50% { transform: skewX(4deg); }
+      }
+      @keyframes lightPulse {
+        0%, 100% { opacity: 0.4; filter: drop-shadow(0 0 2px #6ee7b7); transform: scale(1); }
+        50% { opacity: 1; filter: drop-shadow(0 0 6px #34d399); transform: scale(1.3); }
+      }
+      .g1 { transform-origin: 40px 100px; animation: grassSway 3s ease-in-out infinite; }
+      .g2 { transform-origin: 60px 100px; animation: grassSway 2.5s ease-in-out 0.5s infinite reverse; }
+      .g3 { transform-origin: 80px 100px; animation: grassSway 3.5s ease-in-out 1s infinite; }
+      
+      .l1 { animation: lightPulse 2s infinite; }
+      .l2 { animation: lightPulse 2.5s 0.8s infinite; }
+      .l3 { animation: lightPulse 1.8s 1.2s infinite; }
+    </style>
+</defs>
+
+<!-- Soil base -->
+<rect x="30" y="100" width="60" height="4" rx="2" fill="#29180c"></rect>
+<rect x="40" y="104" width="40" height="3" rx="1.5" fill="#451a03"></rect>
+
+<!-- Blade 1 -->
+<g class="g1">
+  <path d="M40 100 Q30 80 45 65 Q45 80 43 100 Z" fill="#059669"></path>
+  <circle class="l1" cx="43" cy="62" r="2" fill="#6ee7b7"></circle>
+</g>
+
+<!-- Blade 2 (Center) -->
+<g class="g2">
+  <path d="M60 100 Q50 75 62 50 Q66 75 63 100 Z" fill="#10b981"></path>
+  <circle class="l2" cx="61" cy="46" r="2.5" fill="#34d399"></circle>
+</g>
+
+<!-- Blade 3 -->
+<g class="g3">
+  <path d="M80 100 Q95 75 75 60 Q72 80 77 100 Z" fill="#047857"></path>
+  <circle class="l3" cx="74" cy="56" r="1.5" fill="#a7f3d0"></circle>
+</g>
+
+</svg>

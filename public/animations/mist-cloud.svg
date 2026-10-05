@@ -1,0 +1,37 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 120 120" width="100%" height="100%">
+<defs>
+<style>
+      @keyframes driftCloud {
+        0%, 100% { transform: translateX(-5px); }
+        50% { transform: translateX(5px); }
+      }
+      @keyframes morphMist {
+        0%, 100% { d: path("M20 70 Q40 50 60 70 Q80 50 100 70 Q90 90 60 90 Q30 90 20 70 Z"); opacity: 0.4; }
+        50% { d: path("M25 75 Q45 60 65 75 Q85 60 95 75 Q85 85 65 85 Q35 85 25 75 Z"); opacity: 0.6; }
+      }
+      .cloud-group {
+        animation: driftCloud 8s ease-in-out infinite;
+      }
+      .mist-path {
+        animation: morphMist 6s ease-in-out infinite;
+      }
+      
+      .c2 { animation: driftCloud 10s ease-in-out 2s infinite reverse; }
+    </style>
+</defs>
+
+<!-- Night Sky Background -->
+<rect width="120" height="120" fill="#0b0f19"></rect>
+<circle cx="90" cy="30" r="15" fill="#fef08a" opacity="0.8"></circle> <!-- Moon -->
+
+<g class="cloud-group">
+  <path class="mist-path" fill="#94a3b8"></path>
+  <!-- Main Cloud Base -->
+  <path d="M30 60 Q45 40 60 50 Q75 40 90 60 Q100 80 60 80 Q20 80 30 60 Z" fill="#cbd5e1" opacity="0.5"></path>
+</g>
+
+<g class="c2">
+  <path d="M10 80 Q30 65 50 75 Q70 65 80 80 Q90 100 50 100 Q10 100 10 80 Z" fill="#94a3b8" opacity="0.3"></path>
+</g>
+
+</svg>

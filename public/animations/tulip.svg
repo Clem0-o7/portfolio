@@ -1,0 +1,69 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 120 120" width="100%" height="100%">
+<defs>
+<style>
+      @keyframes gentleSway {
+        0%, 100% { transform: rotate(-1deg); }
+        50% { transform: rotate(2deg); }
+      }
+      @keyframes petalOpen {
+        0%, 100% { transform: scaleX(1); }
+        50% { transform: scaleX(1.05); }
+      }
+      @keyframes glowPulse {
+        0%, 100% { filter: drop-shadow(0 0 2px rgba(248, 113, 113, 0.4)); }
+        50% { filter: drop-shadow(0 0 8px rgba(248, 113, 113, 0.8)); }
+      }
+      @keyframes floatUp {
+        0% { transform: translateY(0); opacity: 0.8; }
+        100% { transform: translateY(-15px); opacity: 0; }
+      }
+      .tulip-stem {
+        transform-origin: 60px 105px;
+        animation: gentleSway 3.5s ease-in-out infinite;
+      }
+      .tulip-head {
+        transform-origin: 60px 50px;
+        animation: glowPulse 3s ease-in-out infinite;
+      }
+      .tulip-petals {
+        transform-origin: 60px 50px;
+        animation: petalOpen 4s ease-in-out infinite;
+      }
+      .light-mote { animation: floatUp 2.5s ease-in infinite; }
+    </style>
+</defs>
+
+<!-- Ground patch -->
+<rect fill="#1c1917" height="4" rx="1" width="30" x="45" y="102"></rect>
+<rect fill="#292524" height="4" rx="1" width="20" x="50" y="98"></rect>
+
+<g class="tulip-stem">
+  <!-- Stem -->
+  <path d="M60 98 Q61 75 60 50" fill="none" stroke="#22c55e" stroke-linecap="round" stroke-width="3"></path>
+  
+  <!-- Leaves (Upward sweeping) -->
+  <path d="M60 85 Q50 70 52 50 Q56 65 60 75 Z" fill="#16a34a"></path>
+  <path d="M60 80 Q72 65 68 45 Q64 60 60 70 Z" fill="#15803d"></path>
+
+  <!-- Tulip Head -->
+  <g class="tulip-head">
+    <g class="tulip-petals">
+      <!-- Back Petal -->
+      <path d="M60 60 C45 60 50 40 55 35 C60 30 65 30 65 35 C70 40 75 60 60 60 Z" fill="#b91c1c"></path>
+      
+      <!-- Side Petals -->
+      <path d="M60 62 C45 62 48 45 52 38 C56 45 58 55 60 62 Z" fill="#ef4444"></path>
+      <path d="M60 62 C75 62 72 45 68 38 C64 45 62 55 60 62 Z" fill="#ef4444"></path>
+      
+      <!-- Front Center Petal -->
+      <path d="M60 63 C52 63 54 45 60 40 C66 45 68 63 60 63 Z" fill="#f87171"></path>
+    </g>
+  </g>
+</g>
+
+<!-- Floating lights -->
+<circle class="light-mote" cx="50" cy="40" r="1" fill="#fca5a5" style="animation-delay: 0s"></circle>
+<circle class="light-mote" cx="70" cy="35" r="1.5" fill="#fca5a5" style="animation-delay: 1.2s"></circle>
+<circle class="light-mote" cx="58" cy="25" r="1" fill="#fca5a5" style="animation-delay: 0.6s"></circle>
+
+</svg>

@@ -1,0 +1,62 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 120 120" width="100%" height="100%">
+<defs>
+<style>
+      @keyframes floatBook {
+        0%, 100% { transform: translateY(0); }
+        50% { transform: translateY(-6px); }
+      }
+      @keyframes pageFlip {
+        0% { transform: rotateY(0deg) skewY(0deg); opacity: 1; }
+        50% { transform: rotateY(-90deg) skewY(-10deg); opacity: 0.5; }
+        100% { transform: rotateY(-180deg) skewY(0deg); opacity: 0; }
+      }
+      @keyframes glowMagic {
+        0%, 100% { opacity: 0.4; }
+        50% { opacity: 0.9; filter: drop-shadow(0 0 6px #fcd34d); }
+      }
+      .book-group {
+        animation: floatBook 4s ease-in-out infinite;
+      }
+      .page-flip {
+        transform-origin: 60px 60px;
+        animation: pageFlip 3s ease-in-out infinite;
+      }
+      .magic-dust {
+        animation: glowMagic 2s infinite;
+      }
+    </style>
+</defs>
+
+<g class="book-group">
+  <!-- Glowing aura behind book -->
+  <ellipse cx="60" cy="55" rx="30" ry="10" fill="#fef3c7" opacity="0.1"></ellipse>
+
+  <!-- Left Pages -->
+  <path d="M30 45 Q45 55 60 60 L60 75 Q45 70 30 60 Z" fill="#f8fafc" stroke="#cbd5e1" stroke-width="1"></path>
+  <path d="M30 48 Q45 58 60 63" fill="none" stroke="#e2e8f0" stroke-width="0.5"></path>
+  
+  <!-- Right Pages -->
+  <path d="M90 45 Q75 55 60 60 L60 75 Q75 70 90 60 Z" fill="#f8fafc" stroke="#cbd5e1" stroke-width="1"></path>
+  <path d="M90 48 Q75 58 60 63" fill="none" stroke="#e2e8f0" stroke-width="0.5"></path>
+  
+  <!-- Book Cover (Bottom) -->
+  <path d="M28 62 Q45 72 60 77 Q75 72 92 62 L88 66 Q75 76 60 81 Q45 76 32 66 Z" fill="#7c2d12"></path>
+  <!-- Spine -->
+  <path d="M58 75 L62 75 L62 81 L58 81 Z" fill="#451a03"></path>
+
+  <!-- Animated flipping page -->
+  <path class="page-flip" d="M90 45 Q75 55 60 60 L60 75 Q75 70 90 60 Z" fill="#ffffff" stroke="#cbd5e1" stroke-width="0.5"></path>
+
+  <!-- Text lines on pages -->
+  <line x1="38" y1="58" x2="52" y2="65" stroke="#94a3b8" stroke-width="1" stroke-linecap="round"></line>
+  <line x1="42" y1="62" x2="55" y2="68" stroke="#94a3b8" stroke-width="1" stroke-linecap="round"></line>
+  <line x1="68" y1="65" x2="82" y2="58" stroke="#94a3b8" stroke-width="1" stroke-linecap="round"></line>
+  <line x1="65" y1="68" x2="78" y2="62" stroke="#94a3b8" stroke-width="1" stroke-linecap="round"></line>
+
+  <!-- Magic Dust Particles -->
+  <circle class="magic-dust" cx="60" cy="40" r="2" fill="#fbbf24" style="animation-delay: 0s"></circle>
+  <circle class="magic-dust" cx="45" cy="35" r="1.5" fill="#fcd34d" style="animation-delay: 1s"></circle>
+  <circle class="magic-dust" cx="75" cy="30" r="1" fill="#fde68a" style="animation-delay: 0.5s"></circle>
+</g>
+
+</svg>

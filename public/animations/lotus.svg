@@ -1,0 +1,73 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 120 120" width="100%" height="100%">
+<defs>
+<style>
+      @keyframes floatVert {
+        0%, 100% { transform: translateY(0px); }
+        50% { transform: translateY(-4px); }
+      }
+      @keyframes petalBreathe {
+        0%, 100% { transform: scaleY(1); filter: drop-shadow(0 0 4px rgba(167, 139, 250, 0.4)); }
+        50% { transform: scaleY(1.08); filter: drop-shadow(0 0 10px rgba(167, 139, 250, 0.8)); }
+      }
+      @keyframes rippleExpand {
+        0% { transform: scale(0.5); opacity: 0.8; }
+        100% { transform: scale(2); opacity: 0; }
+      }
+      @keyframes floatMote {
+        0% { transform: translate(0, 0) scale(0.5); opacity: 0; }
+        20% { opacity: 0.8; }
+        80% { opacity: 0.8; }
+        100% { transform: translate(-10px, -20px) scale(1.5); opacity: 0; }
+      }
+      
+      .lotus-group {
+        animation: floatVert 6s ease-in-out infinite;
+      }
+      .lotus-petals {
+        transform-origin: 60px 75px;
+        animation: petalBreathe 5s ease-in-out infinite;
+      }
+      .ripple-1 { transform-origin: 60px 85px; animation: rippleExpand 4s linear infinite; }
+      .ripple-2 { transform-origin: 60px 85px; animation: rippleExpand 4s linear 2s infinite; }
+      
+      .mote-1 { animation: floatMote 4s ease-in infinite; transform-origin: 40px 60px; }
+      .mote-2 { animation: floatMote 5s ease-in 1.5s infinite; transform-origin: 80px 70px; }
+    </style>
+</defs>
+
+<!-- Water Background -->
+<rect fill="#172554" height="40" width="120" x="0" y="80" opacity="0.3"></rect>
+
+<!-- Ripples -->
+<ellipse class="ripple-1" cx="60" cy="85" rx="15" ry="4" fill="none" stroke="#60a5fa" stroke-width="1"></ellipse>
+<ellipse class="ripple-2" cx="60" cy="85" rx="15" ry="4" fill="none" stroke="#60a5fa" stroke-width="1"></ellipse>
+
+<g class="lotus-group">
+  <!-- Lily Pad -->
+  <ellipse cx="60" cy="82" rx="25" ry="6" fill="#065f46" stroke="#047857" stroke-width="1"></ellipse>
+  <path d="M60 82 L75 78 L80 82 Z" fill="#172554"></path> <!-- Lily pad notch -->
+
+  <!-- Lotus Blossom -->
+  <g class="lotus-petals">
+    <!-- Back Petals -->
+    <path d="M60 75 Q45 60 60 45 Q75 60 60 75 Z" fill="#7c3aed" opacity="0.6"></path>
+    <path d="M60 75 Q35 65 50 48 Q65 65 60 75 Z" fill="#8b5cf6" opacity="0.7"></path>
+    <path d="M60 75 Q85 65 70 48 Q55 65 60 75 Z" fill="#8b5cf6" opacity="0.7"></path>
+
+    <!-- Mid Petals -->
+    <path d="M60 75 Q42 62 55 52 Q68 62 60 75 Z" fill="#a78bfa"></path>
+    <path d="M60 75 Q78 62 65 52 Q52 62 60 75 Z" fill="#a78bfa"></path>
+
+    <!-- Front Center Petal -->
+    <path d="M60 75 Q52 65 60 55 Q68 65 60 75 Z" fill="#c4b5fd"></path>
+
+    <!-- Center Glow Point -->
+    <circle cx="60" cy="65" r="2" fill="#fcd34d"></circle>
+  </g>
+</g>
+
+<!-- Magic floating motes -->
+<circle class="mote-1" cx="40" cy="60" r="1.5" fill="#a78bfa"></circle>
+<circle class="mote-2" cx="80" cy="70" r="2" fill="#c4b5fd"></circle>
+
+</svg>

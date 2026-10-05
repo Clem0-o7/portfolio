@@ -1,0 +1,34 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 120 120" width="100%" height="100%">
+<defs>
+<style>
+      @keyframes ripple {
+        0% { transform: scale(0.1); opacity: 0.8; stroke-width: 4px; }
+        100% { transform: scale(2.5); opacity: 0; stroke-width: 0.5px; }
+      }
+      .r1 { transform-origin: 60px 60px; animation: ripple 4s linear infinite; }
+      .r2 { transform-origin: 60px 60px; animation: ripple 4s linear 1.3s infinite; }
+      .r3 { transform-origin: 60px 60px; animation: ripple 4s linear 2.6s infinite; }
+      
+      @keyframes shimmer {
+        0%, 100% { opacity: 0.3; }
+        50% { opacity: 0.7; }
+      }
+      .shimmer { animation: shimmer 3s ease-in-out infinite; }
+    </style>
+</defs>
+
+<!-- Deep Water Base -->
+<rect width="120" height="120" fill="#0f172a"></rect>
+<circle cx="60" cy="60" r="40" fill="#1e3a8a" opacity="0.4"></circle>
+
+<!-- Ripples -->
+<ellipse class="r1" cx="60" cy="60" rx="20" ry="10" fill="none" stroke="#60a5fa"></ellipse>
+<ellipse class="r2" cx="60" cy="60" rx="20" ry="10" fill="none" stroke="#93c5fd"></ellipse>
+<ellipse class="r3" cx="60" cy="60" rx="20" ry="10" fill="none" stroke="#bfdbfe"></ellipse>
+
+<!-- Water Sparkles (Reflections) -->
+<path class="shimmer" d="M30 40 L35 40 M32 38 L32 42" stroke="#bfdbfe" stroke-width="1.5" style="animation-delay: 0s"></path>
+<path class="shimmer" d="M85 65 L90 65 M87 63 L87 67" stroke="#93c5fd" stroke-width="1.5" style="animation-delay: 1s"></path>
+<path class="shimmer" d="M45 85 L50 85 M47 83 L47 87" stroke="#60a5fa" stroke-width="1.5" style="animation-delay: 2s"></path>
+
+</svg>

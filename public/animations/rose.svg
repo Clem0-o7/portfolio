@@ -1,0 +1,77 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 120 120" width="100%" height="100%">
+<defs>
+<style>
+      @keyframes sway {
+        0%, 100% { transform: rotate(-2deg); }
+        50% { transform: rotate(4deg); }
+      }
+      @keyframes breath {
+        0%, 100% { transform: scale(1); filter: drop-shadow(0 0 4px rgba(244, 114, 182, 0.5)); }
+        50% { transform: scale(1.05); filter: drop-shadow(0 0 12px rgba(244, 114, 182, 0.9)); }
+      }
+      @keyframes sparkle {
+        0%, 100% { opacity: 0; transform: scale(0.5); }
+        50% { opacity: 1; transform: scale(1.2); }
+      }
+      @keyframes floatUp {
+        0% { transform: translateY(0) rotate(0deg); opacity: 0.8; }
+        100% { transform: translateY(-30px) rotate(45deg); opacity: 0; }
+      }
+      .rose-stem {
+        transform-origin: 60px 105px;
+        animation: sway 5s ease-in-out infinite;
+      }
+      .rose-blossom {
+        transform-origin: 60px 35px;
+        animation: breath 4s ease-in-out infinite;
+      }
+      .sparkle-1 { animation: sparkle 3s ease-in-out infinite; transform-origin: 45px 35px; }
+      .sparkle-2 { animation: sparkle 4s ease-in-out 1s infinite; transform-origin: 75px 25px; }
+      .petal-float { animation: floatUp 5s linear infinite; transform-origin: 60px 45px; }
+    </style>
+</defs>
+
+<!-- Ground -->
+<rect fill="#1e1b2e" height="6" rx="2" width="40" x="40" y="102"></rect>
+<rect fill="#2d2242" height="6" rx="2" width="28" x="46" y="98"></rect>
+
+<g class="rose-stem">
+  <!-- Stem -->
+  <path d="M60 98 Q64 70 60 40" fill="none" stroke="#10b981" stroke-linecap="round" stroke-width="3"></path>
+  
+  <!-- Thorns (Pixel style) -->
+  <polygon points="63,80 67,78 63,75" fill="#047857" />
+  <polygon points="58,65 54,63 58,60" fill="#047857" />
+  <polygon points="62,50 66,48 62,45" fill="#047857" />
+
+  <!-- Leaves -->
+  <path d="M62 75 C70 75 75 70 78 65 C70 65 65 68 62 72 Z" fill="#059669" stroke="#064e3b" stroke-width="1"></path>
+  <path d="M59 58 C50 58 45 53 42 48 C50 48 55 51 59 55 Z" fill="#059669" stroke="#064e3b" stroke-width="1"></path>
+
+  <!-- Blossom -->
+  <g class="rose-blossom">
+    <!-- Outer Glow aura -->
+    <circle cx="60" cy="35" fill="#f472b6" opacity="0.15" r="18"></circle>
+    
+    <!-- Outer Petals (Geometric blocks) -->
+    <rect fill="#be185d" height="12" rx="4" width="16" x="44" y="30" transform="rotate(-15 52 36)"></rect>
+    <rect fill="#be185d" height="12" rx="4" width="16" x="60" y="30" transform="rotate(15 68 36)"></rect>
+    
+    <!-- Mid Petals -->
+    <rect fill="#db2777" height="14" rx="5" width="14" x="48" y="24" transform="rotate(-10 55 31)"></rect>
+    <rect fill="#db2777" height="14" rx="5" width="14" x="58" y="24" transform="rotate(10 65 31)"></rect>
+    
+    <!-- Center spiral/core -->
+    <rect fill="#f472b6" height="10" rx="3" width="10" x="55" y="20"></rect>
+    <path d="M57 22 Q60 20 63 22 Q65 25 63 27 Q60 29 57 27 Z" fill="#fbcfe8"></path>
+  </g>
+  
+  <!-- Occasional falling/floating petal -->
+  <path class="petal-float" d="M60 45 C55 45 52 48 55 52 C58 48 60 45 60 45" fill="#f472b6" opacity="0.6"></path>
+</g>
+
+<!-- Magic Sparkles -->
+<polygon class="sparkle-1" points="45,30 46,34 50,35 46,36 45,40 44,36 40,35 44,34" fill="#fdf2f8" />
+<polygon class="sparkle-2" points="75,22 76,24 78,25 76,26 75,28 74,26 72,25 74,24" fill="#fdf2f8" />
+
+</svg>

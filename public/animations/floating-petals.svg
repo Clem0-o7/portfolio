@@ -1,0 +1,48 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 120 120" width="100%" height="100%">
+<defs>
+<style>
+      @keyframes drift {
+        0% { transform: translate(-20px, -20px) rotate(0deg); opacity: 0; }
+        20% { opacity: 0.8; }
+        80% { opacity: 0.8; }
+        100% { transform: translate(40px, 60px) rotate(180deg); opacity: 0; }
+      }
+      @keyframes swirl {
+        0% { transform: translate(10px, -30px) rotate(0deg); opacity: 0; }
+        30% { opacity: 1; }
+        70% { opacity: 1; }
+        100% { transform: translate(-30px, 80px) rotate(-360deg); opacity: 0; }
+      }
+      .p1 { animation: drift 6s linear infinite; }
+      .p2 { animation: swirl 5s linear infinite; animation-delay: 1.5s; }
+      .p3 { animation: drift 7s linear infinite; animation-delay: 3s; }
+      .p4 { animation: swirl 8s linear infinite; animation-delay: 4.5s; }
+      .p5 { animation: drift 5s linear infinite; animation-delay: 2s; }
+    </style>
+</defs>
+
+<!-- Background Ambient Glow -->
+<circle cx="60" cy="60" r="40" fill="#fbcfe8" opacity="0.05"></circle>
+
+<!-- Floating Petals -->
+<g class="p1">
+  <path d="M40 30 Q45 25 50 30 Q45 35 40 30 Z" fill="#f472b6" opacity="0.8"></path>
+</g>
+
+<g class="p2">
+  <path d="M70 40 Q75 38 78 45 Q70 48 70 40 Z" fill="#fbcfe8" opacity="0.9"></path>
+</g>
+
+<g class="p3">
+  <path d="M30 60 Q38 55 42 62 Q35 68 30 60 Z" fill="#db2777" opacity="0.7"></path>
+</g>
+
+<g class="p4">
+  <path d="M80 20 Q85 15 90 22 Q82 28 80 20 Z" fill="#f472b6" opacity="0.8"></path>
+</g>
+
+<g class="p5">
+  <path d="M60 10 Q65 5 70 10 Q65 15 60 10 Z" fill="#fbcfe8" opacity="0.6"></path>
+</g>
+
+</svg>

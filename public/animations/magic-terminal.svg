@@ -1,0 +1,51 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 120 120" width="100%" height="100%">
+<defs>
+<style>
+      @keyframes floatTerm {
+        0%, 100% { transform: translateY(0px) rotate(0deg); }
+        50% { transform: translateY(-4px) rotate(1deg); }
+      }
+      @keyframes blinkCursor {
+        0%, 49% { opacity: 1; }
+        50%, 100% { opacity: 0; }
+      }
+      @keyframes scanline {
+        0% { transform: translateY(-20px); opacity: 0; }
+        10% { opacity: 0.1; }
+        90% { opacity: 0.1; }
+        100% { transform: translateY(50px); opacity: 0; }
+      }
+      .terminal-box { animation: floatTerm 6s ease-in-out infinite; }
+      .cursor { animation: blinkCursor 1s steps(1) infinite; }
+      .scanner { animation: scanline 4s linear infinite; }
+    </style>
+</defs>
+
+<g class="terminal-box">
+  <!-- Terminal Body -->
+  <rect x="20" y="30" width="80" height="60" rx="4" fill="#1e293b" stroke="#334155" stroke-width="2"></rect>
+  
+  <!-- Screen -->
+  <rect x="25" y="35" width="70" height="40" rx="2" fill="#020617" stroke="#0f172a" stroke-width="1"></rect>
+  
+  <!-- Screen Glow -->
+  <rect x="25" y="35" width="70" height="40" rx="2" fill="#22c55e" opacity="0.05"></rect>
+
+  <!-- Text / Code Lines -->
+  <path d="M30 45 L50 45" stroke="#22c55e" stroke-width="2" stroke-linecap="round"></path>
+  <path d="M30 52 L60 52" stroke="#22c55e" stroke-width="2" stroke-linecap="round"></path>
+  <path d="M30 59 L40 59" stroke="#22c55e" stroke-width="2" stroke-linecap="round"></path>
+  
+  <!-- Blinking Cursor -->
+  <rect class="cursor" x="45" y="57" width="5" height="5" fill="#4ade80"></rect>
+
+  <!-- Scanline effect on screen -->
+  <line class="scanner" x1="25" y1="35" x2="95" y2="35" stroke="#4ade80" stroke-width="4" opacity="0"></line>
+
+  <!-- Keyboard / base details -->
+  <path d="M40 85 L80 85" stroke="#475569" stroke-width="2" stroke-linecap="round"></path>
+  <rect x="55" y="80" width="10" height="2" fill="#64748b"></rect>
+  <rect x="75" y="30" width="4" height="4" rx="1" fill="#ef4444"></rect>
+</g>
+
+</svg>

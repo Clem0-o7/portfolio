@@ -1,0 +1,60 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 120 120" width="100%" height="100%">
+<defs>
+<style>
+      @keyframes hoverRobot {
+        0%, 100% { transform: translateY(0); }
+        50% { transform: translateY(-4px); }
+      }
+      @keyframes blinkEye {
+        0%, 46%, 54%, 100% { transform: scaleY(1); }
+        50% { transform: scaleY(0.1); }
+      }
+      @keyframes antennaPulse {
+        0%, 100% { fill: #ef4444; filter: drop-shadow(0 0 2px #ef4444); }
+        50% { fill: #fca5a5; filter: drop-shadow(0 0 6px #f87171); }
+      }
+      @keyframes exhaustJet {
+        0%, 100% { opacity: 0.5; transform: scaleY(1); }
+        50% { opacity: 0.9; transform: scaleY(1.5); }
+      }
+      
+      .bot-group {
+        animation: hoverRobot 3s ease-in-out infinite;
+        transform-origin: 60px 60px;
+      }
+      .eye { animation: blinkEye 4s infinite; transform-origin: center; }
+      .antenna { animation: antennaPulse 2s infinite; }
+      .exhaust { animation: exhaustJet 0.2s linear infinite; transform-origin: 60px 80px; }
+    </style>
+</defs>
+
+<g class="bot-group">
+  <!-- Antenna -->
+  <line x1="60" y1="40" x2="60" y2="25" stroke="#94a3b8" stroke-width="2"></line>
+  <circle class="antenna" cx="60" cy="25" r="3"></circle>
+
+  <!-- Head -->
+  <rect x="40" y="40" width="40" height="30" rx="6" fill="#e2e8f0" stroke="#64748b" stroke-width="2"></rect>
+  
+  <!-- Face Screen (Dark) -->
+  <rect x="45" y="45" width="30" height="15" rx="2" fill="#0f172a"></rect>
+  
+  <!-- Eyes -->
+  <g class="eye">
+    <rect x="50" y="48" width="6" height="6" rx="1" fill="#38bdf8"></rect>
+    <rect x="64" y="48" width="6" height="6" rx="1" fill="#38bdf8"></rect>
+  </g>
+
+  <!-- Body Segment -->
+  <path d="M45 70 L75 70 L70 80 L50 80 Z" fill="#cbd5e1" stroke="#64748b" stroke-width="2"></path>
+
+  <!-- Arms -->
+  <path d="M35 50 Q30 65 40 70" fill="none" stroke="#94a3b8" stroke-width="3" stroke-linecap="round"></path>
+  <path d="M85 50 Q90 65 80 70" fill="none" stroke="#94a3b8" stroke-width="3" stroke-linecap="round"></path>
+
+  <!-- Thruster Exhaust -->
+  <path class="exhaust" d="M55 82 L65 82 L60 95 Z" fill="#38bdf8"></path>
+  <path class="exhaust" d="M57 82 L63 82 L60 100 Z" fill="#e0f2fe" opacity="0.8"></path>
+</g>
+
+</svg>

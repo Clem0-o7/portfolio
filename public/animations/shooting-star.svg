@@ -1,0 +1,45 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 120 120" width="100%" height="100%">
+<defs>
+<style>
+      @keyframes shootSky {
+        0% { transform: translate(-30px, -30px); opacity: 1; }
+        30% { opacity: 1; }
+        100% { transform: translate(120px, 120px); opacity: 0; }
+      }
+      @keyframes tailFade {
+        0% { stroke-dashoffset: 40; }
+        100% { stroke-dashoffset: 0; }
+      }
+      .shooting-group {
+        animation: shootSky 2.5s ease-in infinite;
+      }
+      .tail {
+        stroke-dasharray: 40;
+        animation: tailFade 2.5s ease-in infinite;
+      }
+      
+      .s2 { animation: shootSky 3s ease-in 1.5s infinite; }
+      .t2 { animation: tailFade 3s ease-in 1.5s infinite; stroke-dasharray: 40; }
+    </style>
+</defs>
+
+<!-- Night Background -->
+<rect width="120" height="120" fill="#0b0f19" opacity="0.3"></rect>
+
+<g class="shooting-group">
+  <line class="tail" x1="10" y1="10" x2="30" y2="30" stroke="#60a5fa" stroke-width="2" stroke-linecap="round"></line>
+  <circle cx="30" cy="30" r="2.5" fill="#ffffff" filter="drop-shadow(0 0 4px #93c5fd)"></circle>
+</g>
+
+<g class="s2" transform="translate(20, -40)">
+  <line class="t2" x1="10" y1="10" x2="30" y2="30" stroke="#f472b6" stroke-width="1.5" stroke-linecap="round"></line>
+  <circle cx="30" cy="30" r="2" fill="#ffffff" filter="drop-shadow(0 0 4px #fbcfe8)"></circle>
+</g>
+
+<!-- Static distant stars -->
+<circle cx="20" cy="30" r="1" fill="#cbd5e1"></circle>
+<circle cx="80" cy="20" r="0.5" fill="#cbd5e1"></circle>
+<circle cx="90" cy="80" r="1.5" fill="#e2e8f0"></circle>
+<circle cx="40" cy="90" r="0.8" fill="#cbd5e1"></circle>
+
+</svg>

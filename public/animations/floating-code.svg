@@ -1,0 +1,47 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 120 120" width="100%" height="100%">
+<defs>
+<style>
+      @keyframes floatData {
+        0% { transform: translateY(0px) scale(0.8); opacity: 0; }
+        20% { opacity: 0.8; transform: translateY(-10px) scale(1); filter: drop-shadow(0 0 2px #4ade80); }
+        80% { opacity: 0.8; filter: drop-shadow(0 0 4px #22c55e); }
+        100% { transform: translateY(-40px) scale(0.5); opacity: 0; }
+      }
+      .sym1 { animation: floatData 4s linear infinite; }
+      .sym2 { animation: floatData 5s linear 1s infinite; }
+      .sym3 { animation: floatData 3.5s linear 2s infinite; }
+      .sym4 { animation: floatData 4.5s linear 0.5s infinite; }
+      .sym5 { animation: floatData 4.2s linear 1.5s infinite; }
+    </style>
+</defs>
+
+<!-- Background Grid -->
+<path d="M0 60 L120 60 M60 0 L60 120 M0 30 L120 30 M0 90 L120 90 M30 0 L30 120 M90 0 L90 120" stroke="#1e293b" stroke-width="0.5" opacity="0.3"></path>
+
+<!-- Floating Code Symbols (rendered as path geometry) -->
+<g class="sym1" transform="translate(30, 80)">
+  <!-- '<' symbol -->
+  <path d="M10 0 L0 5 L10 10" fill="none" stroke="#4ade80" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
+</g>
+
+<g class="sym2" transform="translate(70, 90)">
+  <!-- '>' symbol -->
+  <path d="M0 0 L10 5 L0 10" fill="none" stroke="#22c55e" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
+</g>
+
+<g class="sym3" transform="translate(50, 70)">
+  <!-- '{' symbol approximated -->
+  <path d="M10 0 Q5 0 5 5 T0 10 T5 15 T10 20" fill="none" stroke="#86efac" stroke-width="1.5" stroke-linecap="round"></path>
+</g>
+
+<g class="sym4" transform="translate(85, 60)">
+  <!-- '/' symbol -->
+  <line x1="5" y1="15" x2="15" y2="0" stroke="#4ade80" stroke-width="2" stroke-linecap="round"></line>
+</g>
+
+<g class="sym5" transform="translate(20, 50)">
+  <!-- ']' symbol -->
+  <path d="M0 0 L10 0 L10 15 L0 15" fill="none" stroke="#22c55e" stroke-width="2" stroke-linecap="round"></path>
+</g>
+
+</svg>

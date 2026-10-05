@@ -1,0 +1,35 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 120 120" width="100%" height="100%">
+<defs>
+<style>
+      @keyframes floatUpSwirl {
+        0% { transform: translateY(0) translateX(0) scale(0.5); opacity: 0; }
+        10% { opacity: 0.8; }
+        50% { transform: translateY(-30px) translateX(10px) scale(1.2); }
+        90% { opacity: 0.8; }
+        100% { transform: translateY(-60px) translateX(-5px) scale(0.8); opacity: 0; }
+      }
+      .s1 { animation: floatUpSwirl 4s ease-in-out infinite; }
+      .s2 { animation: floatUpSwirl 5s ease-in-out 1s infinite; }
+      .s3 { animation: floatUpSwirl 4.5s ease-in-out 2s infinite; }
+      .s4 { animation: floatUpSwirl 5.5s ease-in-out 0.5s infinite; }
+      .s5 { animation: floatUpSwirl 3.5s ease-in-out 1.5s infinite; }
+    </style>
+</defs>
+
+<!-- Night Forest BG glow -->
+<circle cx="60" cy="80" r="40" fill="#064e3b" opacity="0.2"></circle>
+
+<g transform="translate(60, 90)">
+  <!-- Emitter / Base glow -->
+  <ellipse cx="0" cy="0" rx="15" ry="5" fill="#34d399" opacity="0.3"></ellipse>
+  <ellipse cx="0" cy="0" rx="8" ry="3" fill="#6ee7b7" opacity="0.6"></ellipse>
+  
+  <!-- Floating Spores -->
+  <circle class="s1" cx="-10" cy="-5" r="2" fill="#a7f3d0" filter="drop-shadow(0 0 2px #6ee7b7)"></circle>
+  <circle class="s2" cx="5" cy="-2" r="3" fill="#34d399" filter="drop-shadow(0 0 3px #059669)"></circle>
+  <circle class="s3" cx="-5" cy="-8" r="1.5" fill="#6ee7b7" filter="drop-shadow(0 0 2px #34d399)"></circle>
+  <circle class="s4" cx="12" cy="-4" r="2.5" fill="#a7f3d0" filter="drop-shadow(0 0 3px #6ee7b7)"></circle>
+  <circle class="s5" cx="0" cy="-10" r="2" fill="#34d399" filter="drop-shadow(0 0 2px #059669)"></circle>
+</g>
+
+</svg>

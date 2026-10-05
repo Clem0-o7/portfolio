@@ -1,0 +1,44 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 120 120" width="100%" height="100%">
+<defs>
+<style>
+      @keyframes popScale {
+        0%, 100% { transform: scale(0.8); opacity: 0.5; filter: drop-shadow(0 0 0px #fff); }
+        50% { transform: scale(1.2); opacity: 1; filter: drop-shadow(0 0 8px #fbcfe8); }
+      }
+      @keyframes popScaleAlt {
+        0%, 100% { transform: scale(1.1); opacity: 1; filter: drop-shadow(0 0 8px #818cf8); }
+        50% { transform: scale(0.7); opacity: 0.4; filter: drop-shadow(0 0 0px #fff); }
+      }
+      .pixel-core { transform-origin: center; animation: popScale 1s steps(2, end) infinite; }
+      .pixel-alt { transform-origin: center; animation: popScaleAlt 1.2s steps(2, end) infinite; }
+    </style>
+</defs>
+
+<!-- Pixel Art Style Sparkle 1 -->
+<g class="pixel-core" transform="translate(30, 40)">
+  <rect x="0" y="-8" width="4" height="4" fill="#f472b6" />
+  <rect x="-8" y="0" width="4" height="4" fill="#f472b6" />
+  <rect x="4" y="0" width="4" height="4" fill="#f472b6" />
+  <rect x="0" y="8" width="4" height="4" fill="#f472b6" />
+  <rect x="-4" y="-4" width="12" height="12" fill="#fbcfe8" />
+</g>
+
+<!-- Pixel Art Style Sparkle 2 -->
+<g class="pixel-alt" transform="translate(80, 70)">
+  <rect x="0" y="-8" width="4" height="4" fill="#818cf8" />
+  <rect x="-8" y="0" width="4" height="4" fill="#818cf8" />
+  <rect x="4" y="0" width="4" height="4" fill="#818cf8" />
+  <rect x="0" y="8" width="4" height="4" fill="#818cf8" />
+  <rect x="-4" y="-4" width="12" height="12" fill="#c7d2fe" />
+</g>
+
+<!-- Pixel Art Style Sparkle 3 -->
+<g class="pixel-core" transform="translate(60, 20) scale(0.6)">
+  <rect x="0" y="-8" width="4" height="4" fill="#fcd34d" />
+  <rect x="-8" y="0" width="4" height="4" fill="#fcd34d" />
+  <rect x="4" y="0" width="4" height="4" fill="#fcd34d" />
+  <rect x="0" y="8" width="4" height="4" fill="#fcd34d" />
+  <rect x="-4" y="-4" width="12" height="12" fill="#fef3c7" />
+</g>
+
+</svg>

@@ -1,0 +1,67 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 120 120" width="100%" height="100%">
+<defs>
+<style>
+      @keyframes pendulum {
+        0%, 100% { transform: rotate(-5deg); }
+        50% { transform: rotate(5deg); }
+      }
+      @keyframes cascade {
+        0%, 100% { opacity: 0.7; filter: drop-shadow(0 0 2px #d8b4fe); }
+        50% { opacity: 1; filter: drop-shadow(0 0 8px #d8b4fe); }
+      }
+      @keyframes leafSway {
+        0%, 100% { transform: rotate(0deg); }
+        50% { transform: rotate(10deg); }
+      }
+      .branch {
+        transform-origin: 60px 0px;
+        animation: pendulum 6s ease-in-out infinite;
+      }
+      .wisteria-cluster-1 { animation: cascade 4s ease-in-out infinite; }
+      .wisteria-cluster-2 { animation: cascade 4s ease-in-out 1s infinite; }
+      .wisteria-cluster-3 { animation: cascade 4s ease-in-out 2s infinite; }
+      .leaf-1 { transform-origin: 50px 20px; animation: leafSway 5s ease-in-out infinite; }
+      .leaf-2 { transform-origin: 70px 30px; animation: leafSway 5s ease-in-out 1s infinite; }
+    </style>
+</defs>
+
+<!-- Top Branch -->
+<path d="M20 0 Q60 20 100 0" fill="none" stroke="#451a03" stroke-width="4"></path>
+<path d="M40 10 Q60 15 80 10" fill="none" stroke="#78350f" stroke-width="2"></path>
+
+<!-- Leaves -->
+<g class="leaf-1">
+  <path d="M40 10 Q35 25 25 20 Q35 10 40 10 Z" fill="#16a34a"></path>
+  <path d="M45 12 Q30 20 30 30 Q45 25 45 12 Z" fill="#15803d"></path>
+</g>
+<g class="leaf-2">
+  <path d="M75 10 Q85 20 95 15 Q85 10 75 10 Z" fill="#16a34a"></path>
+  <path d="M70 12 Q80 25 75 35 Q65 20 70 12 Z" fill="#15803d"></path>
+</g>
+
+<!-- Hanging Wisteria -->
+<g class="branch">
+  <!-- Main Vine -->
+  <path d="M60 15 Q55 50 60 90" fill="none" stroke="#a21caf" stroke-width="1.5" stroke-dasharray="2, 4"></path>
+  
+  <!-- Clusters of cascading flowers (using basic circles/ellipses) -->
+  <g class="wisteria-cluster-1">
+    <ellipse cx="60" cy="25" rx="12" ry="8" fill="#d8b4fe"></ellipse>
+    <ellipse cx="55" cy="35" rx="10" ry="7" fill="#c084fc"></ellipse>
+    <ellipse cx="65" cy="38" rx="10" ry="7" fill="#a855f7"></ellipse>
+  </g>
+  
+  <g class="wisteria-cluster-2">
+    <ellipse cx="58" cy="48" rx="9" ry="6" fill="#d8b4fe"></ellipse>
+    <ellipse cx="64" cy="55" rx="8" ry="6" fill="#c084fc"></ellipse>
+    <ellipse cx="56" cy="62" rx="7" ry="5" fill="#a855f7"></ellipse>
+  </g>
+  
+  <g class="wisteria-cluster-3">
+    <ellipse cx="61" cy="72" rx="6" ry="5" fill="#d8b4fe"></ellipse>
+    <ellipse cx="57" cy="80" rx="5" ry="4" fill="#c084fc"></ellipse>
+    <ellipse cx="60" cy="88" rx="3" ry="4" fill="#a855f7"></ellipse>
+  </g>
+</g>
+
+</svg>
